@@ -4,8 +4,8 @@ all:
       children:
         controller:
           hosts:
-            controller01-u22:
-              ansible_host: 192.168.200.30
+            # controller01-u22:
+            # ansible_host: 192.168.200.30
           vars:
             vm_os_role: controller
 
