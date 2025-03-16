@@ -35,3 +35,36 @@ exclude_paths:
   - collections/*
 ```
 
+* `.github/workflows/ansible_lint.yaml` dosyamız
+
+```yaml
+name: Ansible Lint
+
+"on":
+  pull_request:
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+
+  push:
+    branches:
+      - main
+      - 'feature/*'
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Ansible Lint
+        uses: ansible/ansible-lint-action@v6
+        with:
+          path: .
+
+```
