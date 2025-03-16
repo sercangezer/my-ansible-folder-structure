@@ -32,6 +32,6 @@ sort_order = none
 
 ```yaml
 exclude_paths:
-  - collections/
+  - collections/*
 ```
 
