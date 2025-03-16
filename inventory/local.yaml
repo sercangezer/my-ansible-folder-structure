@@ -1,0 +1,27 @@
+all:
+  children:
+    ansible-vms:
+      children:
+        controller:
+          hosts:
+            controller01-u22:
+              ansible_host: 192.168.200.30
+          vars:
+            vm_os_role: controller
+
+        managedNodes:
+          hosts:
+            worker01-u22:
+              ansible_host: 192.168.200.31
+            worker02-u22:
+              ansible_host: 192.168.200.32
+            worker03-u22:
+              ansible_host: 192.168.200.33
+            worker04-u24:
+              ansible_host: 192.168.200.34
+            worker05-alma9:
+              ansible_host: 192.168.200.35
+          vars:
+            vm_os_role: managed-node
+  vars:
+    vms_os_type: linux
