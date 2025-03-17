@@ -43,16 +43,16 @@ name: Ansible Lint
 "on":
   pull_request:
     paths:
-      - '**/*.yml'
-      - '**/*.yaml'
+      - "**/*.yml"
+      - "**/*.yaml"
 
   push:
     branches:
       - main
-      - 'feature/*'
+      - "feature/*"
     paths:
-      - '**/*.yml'
-      - '**/*.yaml'
+      - "**/*.yml"
+      - "**/*.yaml"
 
 jobs:
   lint:
@@ -60,11 +60,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run Ansible Lint
-        uses: ansible/ansible-lint-action@v6
+        uses: ansible/ansible-lint@main
         with:
           path: .
-
 ```

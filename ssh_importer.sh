@@ -11,7 +11,7 @@ fi
 echo "id_rsa anahtarı oluşturuldu."
 
 # Ansible host listesi (değiştirebilirsiniz)
-ansible_hosts=("192.168.200.31" "192.168.200.32" "192.168.200.33" "192.168.200.34" "192.168.200.35") # Örnek olarak host1, host2, host3 verdim
+ansible_hosts=("192.168.200.31" "192.168.200.32" "192.168.200.33" "192.168.200.34" "192.168.200.35" "worker01-u22" "worker02-u22" "worker03-u22" "worker04-u24" "worker05-alma9") # Örnek olarak host1, host2, host3 verdim
 
 # Şifre (değiştirebilirsiniz, daha güvenli yöntemler kullanmanız önerilir)
 sys_req_password="ansible"
