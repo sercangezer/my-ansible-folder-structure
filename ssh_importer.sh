@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Sunucuları local dns ekleyelim
+cat << EOF | sudo tee --append /etc/hosts
+
+# ansible nodeları
+192.168.200.30	controller01-u22
+192.168.200.31	worker01-u22
+192.168.200.32	worker02-u22
+192.168.200.33 	worker03-u22
+192.168.200.34	worker04-u24
+192.168.200.35	worker05-alma9
+EOF
+
+
 # Anahtar oluşturma
 ssh-keygen -t rsa -b 4096 -N "" -f /home/ansible/.ssh/id_rsa
 
