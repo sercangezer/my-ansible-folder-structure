@@ -46,6 +46,10 @@ for host in "${ansible_hosts[@]}"; do
     fi
 done
 
-echo "İşlem tamamlandı."
+echo -e "İşlem tamamlandı."
+
+echo -e "Community General paketi indiriliyor."
+ansible-galaxy collection install community.general
+
 
 exit 0
